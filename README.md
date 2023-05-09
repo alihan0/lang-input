@@ -30,9 +30,76 @@ or add with src:
 - Select div with Jquery and init Lang-Input
 
 ```
-<script src="/your-path/lang-input/js/lang-input.js"></script>
-<script>
 $(".lang-input").langInput();
-</script>
 ```
 
+
+# Options
+This library has a few proterties. These are :
+
+- langs [required][Array]
+- placeholder [optional][string]
+- placeholderLangPrefix [optional][boolean]
+- name [optional]][string]
+
+## Usage ##
+
+### Langs: ###
+```
+$(".lang-input").langInput({
+    langs: ["tr","en",...]
+})
+```
+For these features, the min. 2 languages ​​required.
+
+### Placeholder: ###
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "Type Your Username"
+})
+```
+> Blockquotes
+Ayrıca, daha iyi sonuçlar için, kullandığınız yerelleştirme çeviricileri kullanabilirsiniz. Laravel için örnek:
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}"
+})
+```
+so you can get more localized results.
+
+### PlaceholderLangPrefix ###
+If you tick this option as true, the input that will be created will be replaced with an input-group and you can display the language being added in the input as well. It also looks very stylish.
+
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholder: true
+})
+```
+
+### Name ###
+
+You can define a specific name for your inputs.
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholder: true,
+    name = "username
+})
+```
+Now you have specifically determined the name and id values ​​of the input you selected.
+
+If you don't want to define a name value here, you can assign an id to the parent div. So you don't need to define it here.
+```
+// Your other codes
+...
+
+<div class="lang-input" id="username"></div>
+
+...
+// Your other codes
+```
