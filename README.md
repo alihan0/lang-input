@@ -69,7 +69,7 @@ $(".lang-input").langInput({
 so you can get more localized results.
 
 ### PlaceholderLangPrefix ###
-If you tick this option as true, the input that will be created will be replaced with an input-group and you can display the language being added in the input as well. It also looks very stylish.
+If you tick this option as `true`, the input that will be created will be replaced with an input-group and you can display the language being added in the input as well. It also looks very stylish.
 
 ```
 $(".lang-input").langInput({
@@ -120,3 +120,15 @@ var usernameDe = $("#username-de").val();
 In this way, you can access any input you want.
 
 Also, if you place divs inside a form element, serialize methods with the same values ​​will work.
+
+
+# Coming Soon
+
+It was a very nice input, yes, but not enough. It's working for now, but I'll need other inputs in the future.
+
+For this, the feature of adding textarea will be added to the library.
+
+Please share any improvements you can think of or fork the project.
+
+
+Good Code!
