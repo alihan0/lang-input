@@ -15,5 +15,24 @@ or add with src:
 ```
 
 - Create a div for input area
+
+```
+// Your other codes
+...
+
+<div class="lang-input"></div>
+
+...
+// Your other codes
+```
+
+
 - Select div with Jquery and init Lang-Input
+
+```
+<script src="/your-path/lang-input/js/lang-input.js"></script>
+<script>
+$(".lang-input").langInput();
+</script>
+```
 
