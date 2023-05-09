@@ -59,8 +59,7 @@ $(".lang-input").langInput({
     placeholder: "Type Your Username"
 })
 ```
-> Blockquotes
-Ayrıca, daha iyi sonuçlar için, kullandığınız yerelleştirme çeviricileri kullanabilirsiniz. Laravel için örnek:
+> Also, for better results, you can use the localization translators you use. Example for Laravel:
 ```
 $(".lang-input").langInput({
     langs: ["tr","en","ru","de"],
@@ -88,7 +87,7 @@ $(".lang-input").langInput({
     langs: ["tr","en","ru","de"],
     placeholder: "{{__('form.input.type_username')}}",
     placeholder: true,
-    name = "username
+    name : "username
 })
 ```
 Now you have specifically determined the name and id values ​​of the input you selected.
@@ -103,3 +102,21 @@ If you don't want to define a name value here, you can assign an id to the paren
 ...
 // Your other codes
 ```
+
+
+# Selecting The Created Input
+
+It's very simple, whether you use jquery or javascript to select the inputs, each one has an id value.
+
+> To access the input, add -{lang} to the end of the name you entered.
+
+```
+var usernameTr = $("#username-tr").val();
+var usernameEn = $("#username-en").val();
+var usernameRu = $("#username-ru").val();
+var usernameDe = $("#username-de").val();
+```
+
+In this way, you can access any input you want.
+
+Also, if you place divs inside a form element, serialize methods with the same values ​​will work.
