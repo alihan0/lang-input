@@ -41,6 +41,10 @@ This library has a few proterties. These are :
 - placeholder [optional][string]
 - placeholderLangPrefix [optional][boolean]
 - name [optional]][string]
+- input [optional][string]
+- textareaRows [optional[integer]
+- textareaCols [optional][integer]
+
 
 ## Usage ##
 
@@ -90,6 +94,7 @@ $(".lang-input").langInput({
     name : "username
 })
 ```
+
 Now you have specifically determined the name and id values ​​of the input you selected.
 
 If you don't want to define a name value here, you can assign an id to the parent div. So you don't need to define it here.
@@ -102,6 +107,57 @@ If you don't want to define a name value here, you can assign an id to the paren
 ...
 // Your other codes
 ```
+
+
+### Input ###
+You can define 2 types of input types. By default it takes `text` and creates an `<input type="text">`.
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholderLangPrefix: true,
+    name : "username,
+    input : "text"
+})
+```
+or you can creates an `textarea`
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholderLangPrefix: true,
+    name : "username,
+    input : "textarea"
+})
+```
+
+### TextareaCols ###
+It takes the value 0 by default. Determines the number of columns of the created `textarea`. Same functionality as `<textarea cols="0">`
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholderLangPrefix: true,
+    name : "username,
+    input : "textarea",
+    textareaCols: 4
+})
+```
+### TextareaRows ###
+It takes the value 0 by default. Determines the number of columns of the created `textarea`. Same functionality as `<textarea rows="0">`
+```
+$(".lang-input").langInput({
+    langs: ["tr","en","ru","de"],
+    placeholder: "{{__('form.input.type_username')}}",
+    placeholderLangPrefix: true,
+    name : "username,
+    input : "textarea",
+    textareaCols: 4,
+    textareaRows: 4
+})
+```
+
+
 
 
 # Selecting The Created Input
@@ -124,9 +180,9 @@ Also, if you place divs inside a form element, serialize methods with the same v
 
 # Coming Soon
 
-It was a very nice input, yes, but not enough. It's working for now, but I'll need other inputs in the future.
+It was a very good input, yes, but not enough. It works for now, but I will need other inputs in the future.
 
-For this, the feature of adding textarea will be added to the library.
+Adding a textarea to the library has been added, I think it would be nice to add a text editor as well. I'm also planning to do a style update. it should have more different options and more customizable.
 
 Please share any improvements you can think of or fork the project.
 
