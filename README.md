@@ -75,7 +75,7 @@ If you tick this option as `true`, the input that will be created will be replac
 $(".lang-input").langInput({
     langs: ["tr","en","ru","de"],
     placeholder: "{{__('form.input.type_username')}}",
-    placeholder: true
+    placeholderLangPrefix: true
 })
 ```
 
@@ -86,7 +86,7 @@ You can define a specific name for your inputs.
 $(".lang-input").langInput({
     langs: ["tr","en","ru","de"],
     placeholder: "{{__('form.input.type_username')}}",
-    placeholder: true,
+    placeholderLangPrefix: true,
     name : "username
 })
 ```
